@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Button from '../../ui/button'
 import image from '../../assets/images/unnamed.png'
 import { useNavigation } from '@react-navigation/native'
@@ -19,7 +19,7 @@ const Welcome = () => {
                 <Text style={styles.text}>
                     Hesabınız varsa
                 </Text>
-                <Text style={{color:"#76CB4F"}}>Daxil olun</Text>
+                <TouchableOpacity onPress={()=>navigate.navigate("login")} ><Text style={{color:"#76CB4F"}}>Daxil olun</Text></TouchableOpacity>
             </View>
         </View>
     )

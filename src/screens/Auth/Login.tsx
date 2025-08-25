@@ -11,7 +11,7 @@ const Login = () => {
     <View style={styles.login_container}>
       <Text style={styles.login_titile} >Daxil ol</Text>
       <View>
-        <Text>
+        <Text style={styles.label}>
           Telefon
         </Text>
         <TextInput
@@ -20,7 +20,7 @@ const Login = () => {
         />
       </View>
       <View style={{marginBottom:57}}>
-        <Text>
+        <Text style={styles.label}>
           Parol
         </Text>
         <TextInput
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
   login_container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'center',
     alignItems: 'center',
-    gap: 20,
-    padding: 20
+    gap:23,
+    padding: 20,
+    paddingTop:100
   },
   login_titile: {
     fontSize: 24,
@@ -56,6 +56,9 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 50,
     marginTop: 10,
+  },
+  label:{
+    fontSize:14
   }
 })
 
