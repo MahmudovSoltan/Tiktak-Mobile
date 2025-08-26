@@ -1,12 +1,14 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 
 import Button from '../../ui/button'
+import { useNavigation } from '@react-navigation/native'
 const Login = () => {
   const [loginData, setLoginData] = useState({
     phone: "",
     password: ""
   })
+  const navigate = useNavigation()
   return (
     <View style={styles.login_container}>
       <Text style={styles.login_titile} >Daxil ol</Text>
@@ -19,17 +21,27 @@ const Login = () => {
           placeholder='telefon'
         />
       </View>
-      <View style={{marginBottom:57}}>
+      <View style={{ marginBottom: 57 }}>
         <Text style={styles.label}>
           Parol
         </Text>
         <TextInput
           style={styles.input}
           placeholder='telefon'
-         secureTextEntry={true}
+          secureTextEntry={true}
         />
       </View>
       <Button title='Daxil ol' />
+      <View style={styles.login_bottom}>
+        <Text style={styles.bottom_text}>
+          Hesabınız yoxdursa
+        </Text>
+        <TouchableOpacity onPress={()=>navigate.navigate("register")}>
+          <Text style={styles.register_text}>
+            Qeydiyyatdan keç
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   )
 }
@@ -38,9 +50,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    gap:23,
+    gap: 23,
     padding: 20,
-    paddingTop:100
+    paddingTop: 100
   },
   login_titile: {
     fontSize: 24,
@@ -57,8 +69,21 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 10,
   },
-  label:{
-    fontSize:14
+  label: {
+    fontSize: 14
+  },
+  login_bottom: {
+    flexDirection: "row",
+    gap: 5
+  },
+  bottom_text: {
+    color: "#000000DE",
+    fontSize: 12,
+
+  },
+  register_text: {
+    fontSize: 12,
+    color:"#76CB4F"
   }
 })
 

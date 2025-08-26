@@ -11,7 +11,8 @@ import AuthStack from './src/Stacks/Auth';
 export default function App() {
   return (
     <NavigationContainer>
-      <AuthStack />
+      {/* <AuthStack /> */}
+      <MainStacks/>
     </NavigationContainer>
   );
 }
