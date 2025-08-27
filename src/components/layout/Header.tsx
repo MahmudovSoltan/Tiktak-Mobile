@@ -32,11 +32,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: '#FFFF',
     paddingVertical: 10,
     paddingHorizontal: 18,
     shadowColor: '#000',
     elevation: 5,
-    backgroundColor: 'white',
+    borderBottomWidth:1,
+    borderBottomColor:"#00000014"
   },
   header_title: {
     color: '#2B3043',
